@@ -11,7 +11,8 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  skip: True  # [py2k]
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
@@ -23,7 +24,7 @@ requirements:
     - numpy
     - cffi >=1.11.5
   run:
-    - python >=2.7
+    - python
     - cffi >=1.11.5
     - {{ pin_compatible('numpy') }}
 
@@ -42,8 +43,6 @@ about:
   license_family: BSD
   license_file: LICENSE.txt
   summary: 'Parallel t-SNE implementation with Python and Torch wrappers.'
-
-  # The remaining entries in this section are optional, but recommended
   description: |
     This is a multicore modification of Barnes-Hut t-SNE by L. Van der Maaten
     with python and Torch CFFI-based wrappers.
