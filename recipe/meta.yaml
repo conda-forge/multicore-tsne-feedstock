@@ -23,7 +23,7 @@ requirements:
     - numpy
     - cffi >=1.11.5
   run:
-    - python >=2.7
+    - python
     - cffi >=1.11.5
     - {{ pin_compatible('numpy') }}
 
