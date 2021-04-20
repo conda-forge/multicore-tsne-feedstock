@@ -28,13 +28,8 @@ requirements:
     - numpy
 
 test:
-  requires:
-    - scikit-learn =0.19.2
-  source_files:
-    - MulticoreTSNE/tests/test_base.py
-  commands:
-    - "python -m unittest MulticoreTSNE.tests.test_base"
-
+  imports:
+    - MulticoreTSNE
 
 about:
   home: https://github.com/DmitryUlyanov/Multicore-TSNE
