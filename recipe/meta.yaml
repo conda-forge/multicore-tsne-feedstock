@@ -16,9 +16,8 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - cmake
-  host:
     - cmake <3.20
+  host:
     - python
     - pip
     - numpy
