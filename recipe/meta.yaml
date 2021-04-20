@@ -18,12 +18,12 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake <3.20
   host:
-    - python=3.7
+    - python
     - pip
     - numpy
     - cffi >=1.11.5
   run:
-    - python=3.7
+    - python
     - cffi >=1.11.5
     - numpy
 
