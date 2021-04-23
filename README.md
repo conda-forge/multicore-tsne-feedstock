@@ -219,4 +219,5 @@ Feedstock Maintainers
 =====================
 
 * [@grst](https://github.com/grst/)
+* [@pinin4fjords](https://github.com/pinin4fjords/)
 
