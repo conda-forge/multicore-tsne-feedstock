@@ -10,13 +10,19 @@ source:
   sha256: 2558a4d7c3864b6f3211dac823ea79869ae0e9f79fbd1aa6fe03f5848d87054f
 
 build:
-  number: 2
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  number: 3
+  script:
+    - set CMAKE_GENERATOR_PLATFORM=  # [win]
+    - set CMAKE_GENERATOR_TOOLSET=  # [win]
+    - set CMAKE_GENERATOR=Ninja  # [win]
+    - "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake <3.20
+    - make  # [unix]
+    - ninja  # [win]
   host:
     - python
     - pip
